@@ -95,6 +95,14 @@
 
 \usepackage{tikz}
 
+\usepackage[
+  backend=biber,
+  style=numeric,        % or `authoryear` if you prefer
+  sorting=ydnt          % year descending, name, title
+]{biblatex}
+
+\addbibresource{publications.bib}
+
 \definecolor{LeftMarginColor}{HTML}{F28C26}
 
 % Draw the colored margin on every page
@@ -278,66 +286,11 @@ Grafana\\[1em]
 
 \vspace{2em}
 
-\cvsection{Selected Projects}
-
-\cvevent{}{Cancer mortality rate prediction of US counties}{}{}
-Developed regression and neural network models and compared performances\\
-\vspace{0.5em}
-\cvtag{Exploratory Data Analysis} 
-\cvtag{Missing Value Imputation} 
-\cvtag{Ridge Regression}\\
-\vspace{0.2em} 
-\cvtag{Lasso Regression}
-\cvtag{Artificial Neural Network}
-\cvtag{RStudio}
-
-\divider
-
-\cvevent{}{Student dormitory online application automation}{}{}
-Engineered an automation tool to submit application in under 30 seconds\\
-\vspace{0.5em}
-\cvtag{Selenium}
-\cvtag{Plant UML}
-\cvtag{Sonar Cloud}
-\cvtag{Functional Programming}
-\cvtag{Codacy}
-
-\divider
-
-\cvevent{}{Bengali newspaper articles scraper and category classifier}{}{}
-Trained text classification models to assign category for articles from bdnews24.com\\
-\vspace{0.5em}
-\cvtag{TF-IDF} 
-\cvtag{SGD Classifier} 
-\cvtag{GridSearchCV}
-\cvtag{HPO}
-\cvtag{BeautifulSoup}
-\cvtag{scikit-learn}
-\vspace{0.1em}
-\divider
-
-\cvevent{}{Credit card fraud detection using anonymized data with RapidMiner}{}{}
-Evaluated and compared fraud detection models on anonymized transaction data\\
-\vspace{0.5em}
-\cvtag{Decision Trees} 
-\cvtag{Naive Bayes}
-\cvtag{SVM}
-\cvtag{KNN}
-\cvtag{Logistic Regression}
-\cvtag{Ensembler}
-\vspace{0.1em}
-\divider
-
-\cvevent{}{PCA on skill scores and migration trend analysis of football players}{}{}
-Applied PCA to reduce dimensions on skill features and visualized migration trends\\
-\vspace{0.5em}
-\cvtag{prcomp} 
-\cvtag{ggbiplot} 
-\cvtag{screeplot}
-\cvtag{corrplot}
-\cvtag{dplyr}
-\cvtag{networkD3}
-
+\cvsection{Publications}
+\begin{justifying}
+\nocite{saha2025pseudonymization}
+\printbibliography[heading=none]
+\end{justifying}
 
 \end{paracol}
 

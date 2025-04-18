@@ -46,6 +46,7 @@ RUN set -eux; \
   tlmgr install \
     accsupp \
     adjustbox \
+    biber \
     biblatex \
     changepage \
     dashrule \

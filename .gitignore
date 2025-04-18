@@ -5,4 +5,8 @@
 *.out
 *.synctex.gz
 *.xmpi
+*.bbl
+*.bcf
+*.blg
+*.run.xml
 signature.png
