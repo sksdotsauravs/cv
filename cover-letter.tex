@@ -1,0 +1,213 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 August 2024) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{ragged2e}
+% \usepackage[backend=biber]{biblatex}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\Large\sffamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\small\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+
+%% sample.bib contains your publications
+
+\usepackage{tikz}
+
+\definecolor{LeftMarginColor}{HTML}{F28C26}
+
+% Draw the colored margin on every page
+\AddToHook{shipout/background}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[LeftMarginColor]
+      (current page.south west) rectangle
+      ([xshift=1.00cm]current page.north west);
+  \end{tikzpicture}
+}
+
+\renewcommand{\divider}{\textcolor{PastelRed!50}{\hdashrule{1.02\linewidth}{0.6pt}{0.7ex}}\medskip}
+
+
+\begin{document}
+% \name{Your Name Here}
+% \tagline{Your Position or Tagline Here}
+%% You can add multiple photos on the left or right
+%\photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+% \makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+
+\begin{flushleft}
+\textbf{\normalsize
+Saurav Kumar Saha\\
+WH 762-11-01-17\\
+Siegmunds Hof 2-4\\
+10555 Berlin, Germany\\
+\href{mailto:sks.sauravs@yahoo.com}{sks.sauravs@yahoo.com}\\
+\vspace{0.5cm}
+Berlin, \today
+}
+\end{flushleft}
+
+\divider
+
+\begin{flushleft}
+\textbf{\normalsize
+Hiring Team\\
+GetYourGuide\\
+Sonnenburger Straße 73\\
+10437 Berlin, Germany
+}
+\end{flushleft}
+
+\divider
+
+\begin{center}
+\textbf{Application for Data Scientist – Traveler Role}
+\end{center}
+
+\vspace{0.025cm}
+
+\begin{justify}
+
+With great interest, I read the job posting for a Data Scientist position in 
+the Traveler Data Products Team at GetYourGuide. As a Data Science graduate 
+student at the Berliner Hochschule für Technik (BHT) with hands-on experience 
+in machine learning, natural language processing, and backend development, I 
+think that I might be a suitable candidate for this position. I am deeply 
+passionate about building data-driven systems that scale and serve meaningful 
+customer needs.
+\\
+\\
+In my recent research role at BHT's Cognitive Algorithms Lab, I not only 
+developed a pseudonymization model for German texts based on the mT5 model, 
+but also implemented a lightweight web-based application that made it easy for 
+users to interact with the system. This end-to-end tool—deployed as a REST API 
+with a Streamlit interface on a Kubernetes cluster—demonstrates my ability to 
+quickly prototype functional data products that can be readily used by 
+researchers and practitioners alike. I also co-authored a peer-reviewed paper 
+related to this research accepted at AiMH 2025.
+This project deepened my technical knowledge of NLP, Flair, PyTorch and many 
+other tools, as well as enhanced my understanding of privacy-sensitive data 
+workflows and inspired to build scalable machine learning deployment.
+Prior to that, I optimized automation pipelines for statistical factsheets 
+generation at Solactive AG, reducing delivery latency by 90\% using Python, 
+Docker and Rundeck.
+These experiences shaped my strong ML, NLP, and software engineering skills, 
+all rooted in an end-to-end product thinking mindset.
+\\
+\\
+I have extensive experience with Python, SQL, PyTorch, and modern ML 
+libraries, as well as a solid understanding of statistical methods, hypothesis 
+testing, and data visualization. My interest in recommender systems, LLMs, and 
+personalization strategies aligns closely with the mission of the Traveler 
+team.
+I am a proactive, team-oriented individual who values clear communication and 
+continuous learning.
+I would be delighted to contribute my expertise and motivation to your diverse 
+and interdisciplinary team and to help shape the future of travel experience 
+through intelligent data products.
+\\
+\\
+Thank you very much for considering my application. I would be pleased to have 
+the opportunity to discuss my background and your expectations in a personal 
+conversation.
+
+\end{justify}
+
+\vspace{0.5cm}
+
+Best Regards,\\
+
+\vspace{0.5cm}
+
+\includegraphics[width=3cm]{signature}\\[0.2cm]
+\textbf{Saurav Kumar Saha}
+
+\end{document}

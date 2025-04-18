@@ -1,0 +1,1 @@
+This is a LaTeX project to build my personalized curriculum vitae.
