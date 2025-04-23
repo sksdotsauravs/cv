@@ -49,6 +49,7 @@ RUN set -eux; \
     biber \
     biblatex \
     changepage \
+    csquotes \
     dashrule \
     enumitem \
     environ \
