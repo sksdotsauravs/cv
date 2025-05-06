@@ -66,7 +66,7 @@ RUN set -eux; \
 
 # Set PATH for TexLive in /etc/profile.d to make it available in the container
 # and in the VSCode terminal
-RUN RUN set -eux; \
+RUN set -eux; \
   TEXLIVE_DIR="/usr/local/texlive/$(ls /usr/local/texlive | grep -E '^[0-9]{4}$')" && \
   TEXLIVE_PATH="$TEXLIVE_DIR/bin/x86_64-linux" && \
   echo "export PATH=$TEXLIVE_PATH:\$PATH" > /etc/profile.d/texlive.sh
