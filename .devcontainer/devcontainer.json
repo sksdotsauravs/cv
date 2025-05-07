@@ -1,9 +1,6 @@
 {
   "name": "LaTeX Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+  "image": "sksdotsauravs/altacv_builder_debian_texlive:12-2025",
   "customizations": {
     "vscode": {
       "extensions": [
